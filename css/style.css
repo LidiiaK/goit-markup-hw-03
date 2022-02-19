@@ -29,6 +29,13 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.container{ 
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
 li {
     list-style: none;
 }
@@ -40,11 +47,14 @@ h1, h2, h3, h4, ul, p {
 /* Хедер*/
 /* Логотип */
 .logo {
-font-family: Raleway, Oleo Script, sans-serif;
-font-weight: bold;
-font-size: 26px;
-line-height: 31px;
-color: #2196F3;
+    font-family: Raleway, Oleo Script, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    color: #2196F3;
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .logo span { color: #212121;}
 .logo:hover {
@@ -54,9 +64,28 @@ color: #2196F3;
     color: var(--accent-color);
 }
 .header {
-    border: 1px solid #ECECEC;
+    border: 1px solid #ECECEC;  
 }
-
+.line-box {
+    display: flex; 
+    align-items: center;
+}
+.line-box li{
+    display: block;
+}
+.line-box li+li{
+    margin-left: 50px;
+}
+.line-box>ul{
+    margin-left: auto;
+}
+.line-menu {
+    display: flex; 
+}
+.menu-box {
+    display: flex;
+    align-items: center;
+}
 .header .list {
     font-weight: 500;
     font-size: 14px;
@@ -81,6 +110,9 @@ color: #2196F3;
     padding-top: 200px;
     padding-bottom: 280px;
 }
+.hero {
+    text-align: center;
+}
 
 h1 {
     color: var(--hero-text-color);
@@ -100,9 +132,9 @@ button {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px 32px;
     letter-spacing: 0.06em;
     cursor: pointer;
 }
@@ -112,8 +144,22 @@ button:hover, button:focus {
 
 /* Секции */
 .section-second, .projects, .section-team, .portfolio {
-    padding-top: 94px;
     padding-bottom: 94px;
+}
+.section-second {
+    padding-top: 94px;
+}
+.section-second, .projects-element, .photo-team, .buttons {
+    display: flex;
+} 
+.section-second>li+li{
+    margin-left: 30px;
+}
+.projects-element>li+li{
+    margin-left: 30px;
+}
+.photo-team>li+li{
+    margin-left: 30px;
 }
 h2 {font-weight: 700;
     font-size: 36px;
@@ -169,7 +215,7 @@ p {
 .footer .list:focus{
     color: var(--accent-color);
 }
-.footer>div {
+.footer-log {
     margin-bottom: 20px;
 }
 .logof span {
@@ -207,8 +253,23 @@ p {
     line-height: 1.63;
     text-align: center;
 }
+.buttons>li+li{
+    margin-left: 8px;
+}
 .buttons {
-    padding-bottom: 30px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.card{
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100%-90px)/3;
 }
 .buttons button:hover,
 .buttons button:focus{
@@ -230,5 +291,9 @@ p {
     padding-top: 20px; 
     padding-right: 24px;
     padding-bottom: 20px; 
-   padding-left: 24px;
+    padding-left: 24px;
+    border-right: 1px solid #EEEEEE;
+    border-left:1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;  
+    margin-top: -4px;
 }
